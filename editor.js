@@ -725,24 +725,24 @@ function editor_obj()
 		$('#crop_helper').remove();
 		$('<div id=crop_helper><div id=crop_helper_bottom></div><div id=crop_helper_left></div><div id=crop_helper_top></div><div id=crop_helper_right></div></div>').appendTo('#divCanvasData');
 		$('#crop_helper *').css({
-				'background-color':'blue',
+				'background-color':'gray',
 				'opacity':'0.6',
 				'position':'absolute',
 				'z-index':10000
 				});
-		$('#crop_helper_left').css({'ackground-color':'blue',
+		$('#crop_helper_left').css({'background-color':'gray',
 				left: 0,top:$canvasData.position().top,top:0,
 				width:rx1-clip.rx1,height:$canvasData.height()+scrollTop
 				});
-		$('#crop_helper_top').css({'ackground-color':'red',
+		$('#crop_helper_top').css({'background-color':'gray',
 				left: rx1-clip.rx1,top:0,
 				width:clip.rx2-(rx1-clip.rx1),height:ry1-clip.ry1
 				});
-		$('#crop_helper_bottom').css({'ackground-color':'yellow',
+		$('#crop_helper_bottom').css({'background-color':'gray',
 				left: rx1-clip.rx1,top:ry2-clip.ry1,
 				width:clip.rx2-(rx1-clip.rx1),height:clip.ry2-ry2
 				});
-		$('#crop_helper_right').css({'ackground-color':'green',
+		$('#crop_helper_right').css({'background-color':'gray',
 				left: rx2-clip.rx1,top:ry1-clip.ry1,
 				width:clip.rx2-(rx2-clip.rx1),height:ry2-ry1
 				});
@@ -2220,6 +2220,13 @@ $(function(){
 
 	$('.save-to-clipboard').on('click',function (e){
 		var x=staticPlugin.getPluginByKey('copy');
+		editor.createLastCanvas('toolbar', function (data){
+			x.run(data, e)
+		})
+	});
+
+	$('.send-bug').on('click',function (e){
+		var x=staticPlugin.getPluginByKey('sendbug');
 		editor.createLastCanvas('toolbar', function (data){
 			x.run(data, e)
 		})

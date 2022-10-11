@@ -72,7 +72,7 @@ function loadCropper () {
 			})
 			if (window.crop.move) $('#crop_helper').css('cursor', window.crop.move + '-resize');
 			$('#crop_helper *').css({
-				'background-color': 'blue',
+				'background-color': 'gray',
 				'opacity': '0.8',
 				'position': 'absolute',
 				'z-index': 10000

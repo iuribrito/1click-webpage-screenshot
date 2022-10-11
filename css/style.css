@@ -112,7 +112,7 @@ textarea {
 }
 .popup-box {
   background: #fff;
-  width: 280px;
+  width: 380px;
   color: #3c3c3c;
   font-size: 13px;
 }
@@ -172,19 +172,32 @@ textarea {
 .window_nav ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 20px;
+  gap: 10px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 .window_nav ul li {
   padding: 0;
+  flex: 1;
 }
 .window_nav ul li a {
-  display: block;
-  color: #2a84ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+
+  background-color: #eee;
+  color: #333;
   /*background: #2a84ff;*/
   line-height: 34px;
   text-decoration: none;
   border-bottom: 1px #eee solid;
-  padding: 1px 12px;
+  padding: 15px 20px;
   font-size: 14px;
   font-weight: 700;
 }
@@ -867,4 +880,18 @@ textarea {
   width: 70px !important;
   margin: 10px !important;
   cursor: pointer;
+}
+
+#content-painel {
+  display: flex;
+  height: 100vh;
+}
+
+#content-painel .main {
+  flex: 1;
+}
+
+#content-painel .sidebar {
+  background: #181818;
+  width: 300px;
 }

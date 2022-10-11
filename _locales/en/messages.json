@@ -28,8 +28,8 @@
   "date": { "message": "Date" },
   "takecapture": { "message": "Capture Screenshot Now" },
   "resizebefore": { "message": "Resize Window Before Capturing" },
-  "visiblescreenshot": { "message": "Visible Screenshot" },
-  "allpage": { "message": "Whole Page Screenshot" },
+  "visiblescreenshot": { "message": "Visible" },
+  "allpage": { "message": "Fullpage" },
   "noall": {
     "message": "Cannot scroll on this page (extensions do not work on internal Chrome pages nor in the Chrome extensions gallery)."
   },
