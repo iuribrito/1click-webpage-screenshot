@@ -44,10 +44,6 @@ textarea {
     width: 140px !important;
     background-position-x: 115px !important;
   }
-  .editor-toolbar {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
 }
 @media (max-width: 1300px) {
   .editor-toolbar .donation span {
@@ -70,10 +66,6 @@ textarea {
   }
   .editor-toolbar .tools {
     margin-left: 2px !important;
-  }
-  .editor-toolbar .tools button,
-  .editor-toolbar .tools button span {
-    width: 26px !important;
   }
 }
 @media (max-width: 1000px) {
@@ -421,24 +413,14 @@ textarea {
   cursor: pointer;
 }
 .editor-toolbar {
-  background: #ffffff;
-  background: -moz-linear-gradient(top, #ffffff 0%, #eaeaea 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #ffffff),
-    color-stop(100%, #eaeaea)
-  );
-  background: -webkit-linear-gradient(top, #ffffff 0%, #eaeaea 100%);
-  background: -o-linear-gradient(top, #ffffff 0%, #eaeaea 100%);
-  background: -ms-linear-gradient(top, #ffffff 0%, #eaeaea 100%);
-  background: linear-gradient(to bottom, #ffffff 0%, #eaeaea 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea', GradientType=0 );
+  background: #fff;
   border-bottom: 1px #adadad solid;
   box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4);
-  padding: 10px 20px;
   height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 .editor-toolbar .logo {
   float: left;
@@ -494,55 +476,44 @@ textarea {
   padding: 0 20px 0 40px;
 }
 .editor-toolbar .tools {
-  float: left;
-  margin: 13px 0 0 7px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+#wColorPicker2_3 {
   height: 30px;
-  border: 1px #dbdbdb solid;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-  background: #ffffff;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #ffffff),
-    color-stop(100%, #ededed)
-  );
-  background: -webkit-linear-gradient(top, #ffffff 0%, #ededed 100%);
-  background: linear-gradient(to bottom, #ffffff 0%, #ededed 100%);
 }
 .editor-toolbar .tools button {
-  display: block;
-  float: left;
-  height: 30px;
-  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+
+  height: 40px;
+  width: 40px;
   padding: 0;
   margin: 0;
   position: relative;
-  border: none;
-  border-right: 1px #dbdbdb solid;
-  background: none;
+  border-radius: 5px;
+  border: 1px #dbdbdb solid;
   cursor: pointer;
-  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.5);
 }
-.editor-toolbar .tools button.last {
-  border-right: none;
-}
+
 .editor-toolbar .tools button.disable {
-  background: rgba(0, 0, 0, 0.05) !important;
-  cursor: not-allowed;
+  opacity: .5;
 }
 .editor-toolbar .tools button.on {
-  background: rgba(0, 0, 0, 0.1);
+  background: #ccc;
 }
 .editor-toolbar .tools button:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: #ddd;
 }
 .editor-toolbar .tools button:active {
-  background: rgba(0, 0, 0, 0.1);
+  background: #ddd;
 }
 .editor-toolbar .tools button span {
-  position: absolute;
   top: 0;
   left: 0;
   display: block;
@@ -649,9 +620,7 @@ textarea {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
 }
 .buttons {
-  float: right;
   position: relative;
-  margin: 14px 0 0 10px;
 }
 .buttons .label {
   margin: 0 4px 0 0;
@@ -661,7 +630,6 @@ textarea {
   line-height: 32px;
 }
 .buttons button {
-  float: left;
   margin-left: 4px;
   background: #2a84ff;
   border: none;

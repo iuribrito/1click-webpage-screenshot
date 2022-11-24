@@ -67,7 +67,9 @@ var defaultPlugins = [
 
 			data = {
 				image,
-				url: scope.page_url
+				url: scope.page_url,
+				agent: navigator.userAgent,
+				platform: navigator.platform,
 			}
 
 			$.post('http://localhost:3000', data, function (response) {
